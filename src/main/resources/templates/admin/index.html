@@ -27,27 +27,21 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Nome</th>
                                             <th>E-mail</th>
-                                            <th>Endereço</th>
-                                          
+                                                                                      
                                             <th></th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Nome 1</td>
-                                            <td>email1@email.com</td>
-                                            <td>Endereço 01</td>
-                                   
-                                            <td><a href="#" class="btn btn-warning">Alterar</a></td>
-                                            <td><a href="#" class="btn btn-danger">Excluir</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nome 2</td>
-                                            <td>email2@email.com</td>
-                                            <td>Endereço 02</td>
+                                 
+                                        <tr th:each="admin: ${admins}">
+                                            <td th:text="${admin.id}"></td>
+                                            <td th:text="${admin.name}"></td>
+                                            <td th:text="${admin.email}"></td>
+                                            
                                    
                                             <td><a href="#" class="btn btn-warning">Alterar</a></td>
                                             <td><a href="#" class="btn btn-danger">Excluir</a></td>

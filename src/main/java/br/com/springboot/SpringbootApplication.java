@@ -5,11 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import br.com.models.Admin;
-
-
-@EnableJpaRepositories(basePackageClasses = { Admin.class })
-@EntityScan("br.com.models")
+@EnableJpaRepositories("br.com.springboot.service")
+@EntityScan("br.com.springboot.models")
 
 @SpringBootApplication
 public class SpringbootApplication {
