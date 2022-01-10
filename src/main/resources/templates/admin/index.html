@@ -45,7 +45,10 @@
                                             
                                    
                                             <td><a href="#" class="btn btn-warning">Alterar</a></td>
-                                            <td><a href="#" class="btn btn-danger">Excluir</a></td>
+                                            <td><a  th:onclick="'if(confirm(\'Excluir o Administrador selecionado?\'))
+                                                {window.location.href = \'' 
+                                                + @{/admin/{id}(id=${admin.id})} + 
+                                                '/delete\'}'" class="btn btn-danger">Excluir</a></td>
                                         </tr>
                                       
                                     </tbody>

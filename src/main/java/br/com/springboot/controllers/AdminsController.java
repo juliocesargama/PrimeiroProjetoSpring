@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.springboot.models.Admin;
@@ -36,6 +37,14 @@ public class AdminsController {
     public String createAdmin(Admin admin) {
 
         repo.save(admin);
+
+        return "redirect:/admin";    
+    }
+
+    @GetMapping("/admin/{id}/delete")
+    public String deleteAdmin(@PathVariable int id) {
+
+        repo.deleteById(id);
 
         return "redirect:/admin";    
     }
