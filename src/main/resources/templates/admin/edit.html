@@ -3,35 +3,35 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="h3 mb-2 text-gray-800">Novo Administrador</h1>
-                    <p class="mb-4">Preencha os campos abaixo para cadastrar um novo administrador.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Alterar Administrador</h1>
+                    <p class="mb-4">Preencha os campos abaixo para alterar os dados do administrador.</p>
                     <div class="card container shadow mb-2">
                         
-                        <form class="p-3" method="POST" action="/admin/create" onsubmit="return confirm('Confirma o cadastro de novo Administrador?')">
+                        <form class="p-3" method="POST" th:action="@{'/admin/'+ ${admin.id} + '/update'}" onsubmit="return confirm('Confirma as alterações no Administrador?')">
 
                             <div class="form-group">
                               <label for="name">Nome*: </label>
-                              <input type="text" class="form-control" id="name" name="name" required placeholder="Digite o Nome">
+                              <input type="text" class="form-control" th:value="${admin.name}" id="name" name="name" required placeholder="Digite o Nome">
                             </div>
 
                             <div class="form-group">
                               <label for="email">E-mail*: </label>
-                              <input type="email" class="form-control" id="email" name="email" required placeholder="Digite o E-mail">
+                              <input type="email" class="form-control" th:value="${admin.email}" id="email" name="email" required placeholder="Digite o E-mail">
                             </div>
                             
                             <div class="form-group">
                               <label for="password">Senha*: </label>
-                              <input type="password" class="form-control" id="password" name="password" required placeholder="Digite a Senha">
+                              <input type="password" class="form-control" th:value="${admin.password}" id="password" name="password" required placeholder="Digite a Senha">
                             </div>
                             
                             <div class="form-group">
                               <label for="address">Endereço*: </label>
-                              <input type="text" class="form-control" id="address" name="address" required placeholder="Digite o Endereço">
+                              <input type="text" class="form-control" th:value="${admin.address}" id="address" name="address" required placeholder="Digite o Endereço">
                             </div>
 
                             <div class="form-group">
                               <label for="obs">Observações: </label>
-                              <textarea class="form-control" id="obs" name="obs" placeholder="Digite outras observações"></textarea>
+                              <textarea class="form-control" th:field="${admin.obs}" id="obs" name="obs" placeholder="Digite outras observações"></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Cadastrar</button>

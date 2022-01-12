@@ -44,7 +44,7 @@
                                             <td th:text="${admin.email}"></td>
                                             
                                    
-                                            <td><a href="#" class="btn btn-warning">Alterar</a>
+                                            <td><a th:href="@{'/admin/'+ ${admin.id}}" class="btn btn-warning">Alterar</a>
                                             <a  th:onclick="'if(confirm(\'Excluir o Administrador selecionado?\'))
                                                 {window.location.href = \'' 
                                                 + @{/admin/{id}(id=${admin.id})} + 

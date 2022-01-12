@@ -1,6 +1,7 @@
 package br.com.springboot.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,7 +39,7 @@ public class AdminsController {
 
         repo.save(admin);
 
-        return "redirect:/admin";    
+        return "redirect:/admin";
     }
 
     @GetMapping("/admin/{id}/delete")
@@ -46,7 +47,28 @@ public class AdminsController {
 
         repo.deleteById(id);
 
-        return "redirect:/admin";    
+        return "redirect:/admin";
     }
-    
+
+    @GetMapping("/admin/{id}")
+    public String seachAdmin(@PathVariable int id, Model model) {
+
+        Optional<Admin> admin = repo.findById(id);
+        try {
+            model.addAttribute("admin", admin.get());
+        } catch (Exception e) {
+            return "redirect:/admin";
+        }
+        return "/admin/edit";
+    }
+
+    @PostMapping("/admin/{id}/update")
+    public String updateAdmin(@PathVariable int id, Admin admin) {
+
+        if (repo.findById((id)).isPresent()) {
+            repo.save(admin);
+        }
+        return "redirect:/admin";
+
+    }
 }
