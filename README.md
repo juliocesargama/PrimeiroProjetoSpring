@@ -1,5 +1,5 @@
 # PrimeiroProjetoSpring
-#### Status: Em andamento.
+#### Status: Concluído.
 
 Primeira aplicação Java no ecossistema Spring Boot, no qual é possível realizar as operações básicas de criação, alteração e exclusão de um novo Administradores de um sistema, bem como listar todos os Administradores cadastrados após sua autenticação e permanência no sistema.
 
@@ -17,7 +17,7 @@ Primeira aplicação Java no ecossistema Spring Boot, no qual é possível reali
 
 ## Instruções para a Instalação:
 
-Projeto em produção sendo executado no [Heroku](https://jcgama-springboot.herokuapp.com/). 
+Projeto em produção sendo executado no [Heroku](https://jcgama-springboot.herokuapp.com/login). 
 
 Usuário padrão: `julio@email.com`
 
