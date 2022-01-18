@@ -1,7 +1,7 @@
 # PrimeiroProjetoSpring
 #### Status: Em andamento.
 
-Primeira aplicação Java no ecossistema Spring Boot, no qual é possível realizar as operações básicas de criação, alteração e exclusão de um novo Administradores de um sistema, bem como listar todos os Administradores cadastrados após sua autenticação no sistema.
+Primeira aplicação Java no ecossistema Spring Boot, no qual é possível realizar as operações básicas de criação, alteração e exclusão de um novo Administradores de um sistema, bem como listar todos os Administradores cadastrados após sua autenticação e permanência no sistema.
 
 ## Tecnologias:
 - Spring Boot v2.6.2;
@@ -11,7 +11,8 @@ Primeira aplicação Java no ecossistema Spring Boot, no qual é possível reali
 ## Características:
 - Gerenciador de dependências Maven;
 - Dependências Spring: com dependências: JPA, Web e Postgres;
-- Padrão de projeto em camadas (MVC);
+- Serviço de Autenticação do usuário e autorização de acesso aos recursos do sistema (Cookie e Pre Handler Interceptor);
+- Padrão de projeto em camadas MVC: Controller, Service, Repository e Model;
 - Estilização das páginas com Bootstrap 4.
 
 ## Instruções para a Instalação:
