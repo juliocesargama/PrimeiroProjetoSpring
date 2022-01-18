@@ -17,7 +17,13 @@ Primeira aplicação Java no ecossistema Spring Boot, no qual é possível reali
 
 ## Instruções para a Instalação:
 
-Para rodar o projeto, basta executar o comando:
+Projeto em produção sendo executado no [Heroku](https://jcgama-springboot.herokuapp.com/). 
+
+Usuário padrão: `julio@email.com`
+
+Senha padrão: `julio`.
+
+Para rodar o projeto localmente, basta executar o comando:
 
 ```sh
 ./mvnw spring-boot:run

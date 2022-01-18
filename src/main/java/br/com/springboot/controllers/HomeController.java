@@ -17,7 +17,7 @@ public class HomeController {
 
         model.addAttribute("nome", CookieService.getCookie(request, "userName"));
 
-        return "home/index";
+        return "redirect: home/index";
     }
     
 }
